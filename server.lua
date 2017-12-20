@@ -41,6 +41,15 @@ AddEventHandler( 'chatMessage', function( source, n, msg )
     end
 end )
 
+-- Vest function
+AddEventHandler( 'chatMessage', function( source, n, msg )  
+    msg = string.lower( msg )
+    if ( msg == "/vest" or msg == "/veston" ) then 
+        CancelEvent() 
+        TriggerClientEvent( 'gloveson', source )
+    end
+end )
+
 --hood
 AddEventHandler( 'chatMessage', function( source, n, msg )  
     msg = string.lower( msg )
